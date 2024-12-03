@@ -1,8 +1,8 @@
-import * as dotenv from "dotenv";
-
+import mssql from "mssql";
+import dotenv from "dotenv";
 dotenv.config();
 
-export const dbConfig = {
+export const sqlConfig = {
   user: process.env.DB_USER as string,
   password: process.env.DB_PWD as string,
   database: process.env.DB_NAME as string,
@@ -18,8 +18,13 @@ export const dbConfig = {
   },
 };
 
-const testConnection = () => {
-  console.log("Connected to database");
-};
+async function TestConnection() {
+  const pool = await mssql.connect(sqlConfig);
+  if (pool.connected) {
+    console.log("connected to database");
+  } else {
+    console.log("not connected");
+  }
+}
 
-testConnection();
+TestConnection();
