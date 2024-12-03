@@ -5,7 +5,7 @@ import {
   loginUser,
   registerUser,
 } from "../controllers/userControllers";
-import { verifyToken } from "../middleware/tokenVerify";
+import { verifyToken } from "../middlewares/tokenVerify";
 
 const user_router = Router();
 

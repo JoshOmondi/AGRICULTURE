@@ -3,7 +3,7 @@ import mssql from "mssql";
 import jwt from "jsonwebtoken";
 import { v4 } from "uuid";
 
-import { sqlConfig } from "../config/sqlConfig";
+import { sqlConfig } from "../config/db";
 import { projectAssignmentValidationSchema } from "../validators/projectValidators";
 
 // Admin assigns projects

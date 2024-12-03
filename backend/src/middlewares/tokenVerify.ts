@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import { NextFunction, Request, Response } from "express";
 dotenv.config({ path: "./.env" });
 import jwt from "jsonwebtoken";
-import { User } from "../interfaces/users";
+import { User } from "../interface/users";
 
 export interface ExtendedUser extends Request {
   info?: User;
