@@ -1,19 +1,30 @@
--- USE SHOPPIE_ECO_APP
-CREATE TABLE Users(
-    userID VARCHAR(100) PRIMARY KEY,
-    fullName VARCHAR(200) NOT NULL,
-    email VARCHAR(250) NOT NULL,
-    password VARCHAR(100) NOT NULL,
-    role VARCHAR(100) DEFAULT 'customer',
-    resetToken VARCHAR(500) DEFAULT NULL,
-    expiryTime DATETIME DEFAULT NULL,
-    welcomed BIT Default 0,
-    isSend BIT DEFAULT 0,
-    profileImage VARCHAR(1000) NOT NULL
-)
-
+-- -- -- -- create DATABASE Project_Management
+-- -- -- -- alter database Project_Management MODIFY name  = projectManagementSystem
+-- -- -- -- use projectManagementSystem
 select * from Users
 
-UPDATE Users SET role='Admin' where email='isaackilimok2@gmail.com' 
--- ALTER TABLE Users ADD 
-DROP TABLE Users
+
+-- create TABLE Users (
+--     userID VARCHAR(300) not null PRIMARY KEY,
+--     userName VARCHAR(255) not null,
+--     email VARCHAR(255) not null UNIQUE,
+--     password VARCHAR(255) not null,
+--     AssignedProjectID INT, 
+--     EmailSent BIT  DEFAULT 0,
+--     phone_no VARCHAR (250) UNIQUE, 
+--     role varchar(20) DEFAULT 'employee',
+--     Welcomed bit DEFAULT 0,
+-- );
+alter table Users
+drop COLUMN AssignedProjectID
+
+-- -- -- --  
+-- -- -- drop table Users
+
+--created the admin
+-- update Users 
+-- set role = 'admin'
+-- where email = 'joshuaomondi3334@gmail.com'
+
+delete from Users 
+where email = 'joshuaomondi3334@gmail.com'
