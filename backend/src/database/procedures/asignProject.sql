@@ -3,7 +3,7 @@
 -- select * from Projects
 -- -- drop procedure assignProject
 -- delete from Projects
--- where  AssignedUserEmail = 'cylvonnen@gmail.com'
+-- where  AssignedUserEmail = 'joshuaomondi3334@gmail.com'
 
 
 

@@ -1,4 +1,5 @@
 -- use projectManagementSystem
+
 CREATE OR ALTER PROCEDURE registerUser(
     @userID varchar(100),
     @userName varchar(200),

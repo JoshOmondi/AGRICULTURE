@@ -1,4 +1,4 @@
--- use projectManagementSystem
+-- use AGRICULTURE
 -- drop procedure deleteProject
 -- select * from Projects
 -- CREATE PROCEDURE deleteProject
