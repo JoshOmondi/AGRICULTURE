@@ -1,16 +1,16 @@
-import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
-
-export const routes: Routes = [
-  { path: '', component: HomeComponent }, // Default route
-  { path: '**', redirectTo: '' }, // Fallback route
-];
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component'; // Import HomeComponent
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes), // Register routes
+  declarations: [
+    AppComponent,
+    HomeComponent, // Declare HomeComponent here
   ],
-  exports: [RouterModule], // Export RouterModule
+  imports: [BrowserModule, AppRoutingModule],
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppRoutingModule {}
+export class AppModule {}
