@@ -8,7 +8,7 @@ import {
   projectCompleted,
   singleProject,
   updateStatus,
-} from "../controllers/projectControllers";
+} from "../controllers/projectContollers";
 
 const project_router = Router();
 
